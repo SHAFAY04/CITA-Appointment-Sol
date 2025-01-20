@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Custom CSS classes for React Transition Group */
+  .fade-enter {
+    @apply opacity-0 scale-90;
+  }
+  .fade-enter-active {
+    @apply animation-fadeIn;
+  }
+  .fade-exit {
+    @apply opacity-100 scale-100;
+  }
+  .fade-exit-active {
+    @apply animation-fadeOut;
+  }
+}
+.shake-icon {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.wobble-icon {
+  animation: wobble 1s infinite;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-25px) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-icon {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-icon {
+  animation: fade 1.5s infinite;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.bounce-icon {
+  animation: bounce 1s infinite;
+}
+.fadeShafay {
+  animation: shafayFade 1s ease-out;
+}
+
+@keyframes shafayFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.fadeScaleBounce {
+  animation: fadeScaleBounce 1.5s ease-in-out both;
+  transform-origin: center;
+}
+
+@keyframes fadeScaleBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom CSS file */
+
+@media (max-width: 375px) {
+  .extra-small-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .extra-small-form-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .extra-small-icon {
+    height: 128px;
+  }
+}
