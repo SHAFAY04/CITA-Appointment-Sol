@@ -12,9 +12,13 @@
     "users": "json-server --watch src/users.json --port 8001"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^6.4.0",
+    "@mui/material": "^6.4.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@types/uuid": "^10.0.0",
     "date-fns": "^3.6.0",
