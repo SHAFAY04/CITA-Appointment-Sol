@@ -7,12 +7,12 @@ const homepage = () => {
 
   const access= useSelector((state:RootState)=>state.auth.accessToken)
   const name= useSelector((state:RootState)=>state.auth.username)
-  const sub= access?`WELCOME ${name}`:undefined
   return (
     <>
-     <Hero title='TheJobPoint' subtitle={sub}>
-Your All in One Jobs Solution!      </Hero>
-      
+       <Hero/>
+      {/* <HomeCards /> */}
+      {/* <JobListing isHome={true}/>
+      <ViewAllJobs /> */}
     </>
   )
 }
