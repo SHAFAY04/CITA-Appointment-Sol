@@ -4,7 +4,6 @@ import App from './App.tsx'
 import './index.css'
 import  store  from './store.tsx'
 import { Provider  } from 'react-redux'
-import { AuthProvider } from './context/AuthContext.tsx'
 
 //The ! operator is used to assert that the 
 //result is not null, effectively telling TScript
@@ -13,9 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     
     <Provider store={store}>
-    <AuthProvider>
     <App />
-    </AuthProvider>
     </Provider>
     
   </React.StrictMode>,

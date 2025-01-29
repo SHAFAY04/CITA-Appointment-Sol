@@ -1,6 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/postgreSql'; // your Sequelize instance
-import { inherits } from 'util';
+import sequelize from '../config/postgreSql'; 
 
 const users=sequelize.define ('users',{
   username: {
