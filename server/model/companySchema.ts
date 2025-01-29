@@ -1,6 +1,5 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/postgreSql'; // your Sequelize instance
-import Job from './jobSchema'; // Assuming Job model is in the same folder
 
 const company = sequelize.define('company', {
   companyid: {

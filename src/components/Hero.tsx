@@ -1,36 +1,49 @@
-import{  ReactNode } from 'react'
+import { ReactNode } from 'react';
+import logo from "../assets/images/cita.jpg";
+import { NavLink } from 'react-router-dom';
+import medic from '../assets/images/medicAnimated-removebg-preview.png';
 
-type headingProps={title?:string,children:ReactNode, subtitle?:string}
+const Hero = () => {
+  interface LinkClassProps {
+    isActive: boolean;
+  }
+  const linkClass = ({ isActive }: LinkClassProps) =>
+    isActive
+      ? 'h-7 text-sm font-bold pt-1 px-4 font-poppins bg-cyan-50 rounded-2xl '
+      : 'h-7 text-sm font-bold pt-1 px-4 font-poppins hover:bg-cyan-50 rounded-2xl ';
 
-
-//A REACT COMPONENT CAN HAVE PARAMETERS/ATTRIBUTES
-//AS YOU CAN SEE
-const Hero = ({title='Become A React Dev',children,subtitle}:headingProps) => {
   return (
     <>
-    {/* <!-- Hero --> */}
-    <section className="bg-emerald-600 py-20 mb-0">
-        <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center"
-        >
-          <div className="text-center">
-            <h1
-              className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
-            >
-              {title}
-            </h1>
-            <p>
-              {  /*this will be a reactNode*/}
-                {children}
-            </p>
-            <p className="my-4 text-xl text-white">
-              {subtitle}
-            </p>
+      {/* <!-- Hero --> */}
+      <div className="bg-customBlue flex flex-col items-center h-[620px]">
+        {/* Navigation Container */}
+        <div className="flex justify-between w-full max-w-5xl pt-20">
+          {/* Logo */}
+          <img className="h-32 w-60" src={logo} alt="image here" />
+
+          {/* Navigation Items */}
+          <div className="flex space-x-6 mt-6">
+            <NavLink to="/" className={linkClass}>
+              Home
+            </NavLink>
+            <NavLink to="/pricing" className={linkClass}>
+              Pricing
+            </NavLink>
+            <NavLink to="/support" className={linkClass}>
+              Support
+            </NavLink>
+            <NavLink to="/login" className={linkClass}>
+              LogIn
+            </NavLink>
           </div>
         </div>
-      </section>
-    </>
-  )
-}
 
-export default Hero
+        {/* Gradient Section */}
+        <div className="bg-gradient-to-r from-cyan-50 to-customBlue h-[1000px] w-full  mt-[400px]  " >
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Hero;

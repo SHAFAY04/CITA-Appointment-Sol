@@ -17,6 +17,9 @@ export default {
         raleway: ['Raleway', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
+      colors: {
+        customBlue: '#88b8cb',
+      },
       gridTemplateColumns: {
         '70-30': '70% 30%', // Added unit to 30%
       },

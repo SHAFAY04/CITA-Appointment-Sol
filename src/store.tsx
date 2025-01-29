@@ -2,7 +2,7 @@
 
 import { Reducer } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
-import jobReducer from './components/jobSlice';
+// import jobReducer from './components/jobSlice';
 import { Middleware } from '@reduxjs/toolkit';
 import registerApiSlice from './api/registerApiSlice'
 import authApiSlice from './api/authApiSlice';
@@ -24,7 +24,7 @@ const refreshApiMiddleware:Middleware=refreshApiSlice.middleware
 const store = configureStore({
   reducer: {
     auth:authReducer,//authSlice reducer
-    job: jobReducer,
+    // job: jobReducer,
     registerApi:registerApiReducer,
     authApi:authApiReducer, //rtk query authApiSlice reducer
     recentJobs:recentJobApiReducer,

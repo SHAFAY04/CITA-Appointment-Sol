@@ -10,8 +10,6 @@ import { useDispatch} from 'react-redux';
 import {  setCredentials } from '../auth/authSlice';
 import { Link, useLocation, useNavigate,useSearchParams } from 'react-router-dom';
 import Logo from '../assets/images/Scrw-modified.png'
-import LoginWithGoogle from './LoginWithGoogle';
-import LoginWithFacebook from './LoginWithFacebook';
 
 
 const Login = () => {
@@ -170,8 +168,8 @@ const Login = () => {
                   LOG IN!
                 </button>
               </div>
-            <LoginWithGoogle/>
-            <LoginWithFacebook/>
+            {/* <LoginWithGoogle/>
+            <LoginWithFacebook/> */}
               {/* Register link */}
               <p className=' mb-4'>Don't have an account?</p>
               <Link className='underline text-lg' to={isEditor?'/register?editor=true':'/register'}>{isEditor?'Register As Employer Now!':'Register Now!'}</Link>
