@@ -8,6 +8,7 @@ import { useState } from 'react'
 import Login from './components/login'
 import RequireAuth from './auth/requireAuth'
 import PersistLogin from './auth/persistLogin'
+import StoreRegistration from './pages/StoreRegistration';
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 </Route>
   {/* <Route path='/register' element={<Register/>}/> */}
 <Route path='/login' element={<Login/>}/>
+<Route path='/store' element={<StoreRegistration/>}/>
 </>))
 
 

@@ -1,8 +1,8 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/postgreSql'; // your Sequelize instance
 
-const company = sequelize.define('company', {
-  companyid: {
+const store = sequelize.define('store', {
+  storeid: {
     type: DataTypes.STRING(10),
     primaryKey: true,
   },
@@ -21,6 +21,14 @@ const company = sequelize.define('company', {
   contactemail: {
     type: DataTypes.STRING(50),
     allowNull: false
+  },
+  city:{
+    type: DataTypes.STRING(50),
+    allowNull: false
+  },
+  country:{
+    type: DataTypes.STRING(50),
+    allowNull: false
   }
-},{timestamps:false,modelName:'company',tableName:'company'});
-export default company 
+},{timestamps:false,modelName:'store',tableName:'store'});
+export default store 
