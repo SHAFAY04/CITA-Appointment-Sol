@@ -15,6 +15,7 @@ import refreshRoute from './routes/refresh';
 import logoutRouter from './routes/logout';
 import credentials from './middleware/credentials';
 import * as dotenv from 'dotenv';
+import browseRoute from './routes/browseRoute';
 
 
 dotenv.config();
@@ -46,7 +47,7 @@ app.use('/logout', logoutRouter);
 
 // Authentication middleware for routes after this point
 app.use(verifyJwt);
-
+app.use('/browse',browseRoute)
 
 app.get('^/*', (req:Request, res:Response) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
