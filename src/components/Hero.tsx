@@ -25,7 +25,7 @@ const Hero = () => {
             <NavLink to="/" className={linkClass}>
               Home
             </NavLink>
-            <NavLink to="/pricing" className={linkClass}>
+            <NavLink to="/store" className={linkClass}>
               Pricing
             </NavLink>
             <NavLink to="/support" className={linkClass}>
