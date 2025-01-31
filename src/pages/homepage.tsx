@@ -1,6 +1,4 @@
-import { useSelector } from "react-redux"
 import Hero from "../components/Hero"
-import { RootState } from "../store"
 {/*React Router and setting multiple pages*/}
 
 const homepage = () => {
