@@ -1,7 +1,6 @@
-import { ReactNode } from 'react';
 import logo from "../assets/images/cita.jpg";
 import { NavLink } from 'react-router-dom';
-import medic from '../assets/images/medicAnimated-removebg-preview.png';
+// import medic from '../assets/images/medicAnimated-removebg-preview.png';
 
 const Hero = () => {
   interface LinkClassProps {

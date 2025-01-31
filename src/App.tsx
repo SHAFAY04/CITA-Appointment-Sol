@@ -3,7 +3,6 @@ import MainLayout from './layouts/MainLayout'
 import Homepage from './pages/homepage'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import './index.css'; // Include this for custom Tailwind styl
-import { useState } from 'react'
 // import Register from './components/Register'
 import Login from './components/login'
 import RequireAuth from './auth/requireAuth'

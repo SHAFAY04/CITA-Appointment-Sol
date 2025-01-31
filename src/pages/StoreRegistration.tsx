@@ -20,7 +20,7 @@ const StoreRegistration = () => {
       }, []);
       const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Store Location:', storeLocation);
+        console.log('Store Location:', storeLocation,isMarkerDragged);
         // Send the store location to your backend
       };
     return (

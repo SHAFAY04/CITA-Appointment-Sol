@@ -5,8 +5,8 @@ import { RootState } from "../store"
 
 const homepage = () => {
 
-  const access= useSelector((state:RootState)=>state.auth.accessToken)
-  const name= useSelector((state:RootState)=>state.auth.username)
+  // const access= useSelector((state:RootState)=>state.auth.accessToken)
+  // const name= useSelector((state:RootState)=>state.auth.username)
   return (
     <>
        <Hero/>
